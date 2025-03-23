@@ -2,7 +2,7 @@
 
 AudioContent::AudioContent() : title{"Untitled"},artist{"Unnamed"} {}
 
-AudioContent::AudioContent(std::string Title,std::string Artist) : title{Title},artist{Artist} {}
+AudioContent::AudioContent(const std::string& Title,const std::string& Artist) : title{Title},artist{Artist} {}
 
 AudioContent::AudioContent(const AudioContent& audio) : title{audio.title},artist{audio.artist} {}
 
@@ -39,7 +39,7 @@ void AudioContent::setArtist(const std::string& Artist)
 
 Song::Song() : AudioContent{} {}
 
-Song::Song(std::string Title,std::string Artist) : AudioContent(Title,Artist) {}
+Song::Song(const std::string& Title,const std::string& Artist) : AudioContent(Title,Artist) {}
 
 Song::Song(const Song& song) : AudioContent{song} {}
 

@@ -22,7 +22,7 @@ void Playlist::addContent(const AudioContent& audio)
 
 void Playlist::removeContent(const std::string& Title)
 {
-    for(auto x = content.begin() ; x != content.end() ; ++x)
+    for(auto x = begin() ; x != end() ; ++x)
     {
         if((*x).getTitle() == Title)
         {
@@ -40,4 +40,13 @@ void Playlist::ShowContents()
     {
         std::cout << "Title : " << x.getTitle() << " , Artist : " << x.getArtist() << std::endl;
     }
+}
+
+std::vector<AudioContent>::const_iterator Playlist::begin() const
+{
+    return content.cbegin();
+}
+std::vector<AudioContent>::const_iterator Playlist::end() const
+{
+    return content.cend();
 }

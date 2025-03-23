@@ -13,7 +13,7 @@ class AudioContent
         std::string artist;
     public:
         AudioContent();
-        AudioContent(std::string Title,std::string Artist);
+        AudioContent(const std::string& Title,const std::string& Artist);
         AudioContent(const AudioContent& content);
         AudioContent& operator=(const AudioContent& song);
 
@@ -27,7 +27,7 @@ class Song : public AudioContent
 {
     public:
         Song();
-        Song(std::string Title,std::string Artist);
+        Song(const std::string& Title,const std::string& Artist);
         Song(const Song& song);
         Song& operator=(const Song& song);
 };
